@@ -1,0 +1,16 @@
+#dashboard-wrapper {
+	display: grid;
+	grid-template-areas:
+		'aside navbar navbar'
+		'aside main main';
+	grid-template-columns: 350px 1fr;
+	grid-template-rows: 75px auto;
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	#dashboard-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+}
