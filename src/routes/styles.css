@@ -21,7 +21,7 @@ html {
 
 body {
 	/* background: var(--light-background); */
-	color: var(--qwik-dark-text);
+	color: var(--qwik-light-text);
 	overflow-x: hidden;
 }
 

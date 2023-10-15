@@ -11,34 +11,34 @@ export default component$(() => {
 			},
 			{
 				name: 'Analitic',
-				link: '/dashboard/analitic',
+				link: '/dashboard/analitic/',
 				icon: 'uil-graph-bar',
 			},
 			{
 				name: 'Explore',
-				link: 'dashboard/explore',
+				link: '/dashboard/explore/',
 				icon: 'uil-compass',
 			},
 			{
 				name: 'Shop',
-				link: '/dashboard/shop',
+				link: '/dashboard/shop/',
 				icon: 'uil-shopping-bag',
 			},
 			{
 				name: 'Inbox',
-				link: '/dashboard/inbox',
+				link: '/dashboard/inbox/',
 				icon: 'uil-inbox',
 			},
 		],
 		tools: [
 			{
 				name: 'Settings',
-				link: '/dashboard/settings',
+				link: '/dashboard/settings/',
 				icon: 'uil-setting',
 			},
 			{
 				name: 'Help',
-				link: '/dashboard/help',
+				link: '/dashboard/help/',
 				icon: 'uil-question-circle',
 			},
 		],
@@ -53,12 +53,12 @@ export default component$(() => {
 	return (
 		<>
 			<aside
-				class='[grid-area:aside] md:w-full w-[80%] flex absolute overflow-y-auto bg-yellow-400 transition-transform -translate-x-full md:translate-x-0 top-0 left-0 z-40 h-screen border-2 border-gray-100'
+				class='[grid-area:aside] md:w-full w-[80%] flex absolute overflow-y-auto bg-zinc-900 rounded-lg transition-transform -translate-x-full md:translate-x-0 top-0 left-0 z-40 h-screen '
 				aria-label='Sidebar'
 				id='logo-sidebar'
 			>
-				<nav class='flex flex-col flex-1'>
-					<div class='h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800'>
+				<nav class='flex flex-col flex-1 rounded-lg'>
+					<div class='h-full px-3 py-4 overflow-y-auto'>
 						<a
 							href='https://flowbite.com/'
 							class='flex items-center pl-2.5 mb-5'

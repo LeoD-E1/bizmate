@@ -1,9 +1,9 @@
-import { component$, Slot, useStyles$ } from '@builder.io/qwik'
+import { component$, Slot } from '@builder.io/qwik'
 import { routeLoader$ } from '@builder.io/qwik-city'
 import type { RequestHandler } from '@builder.io/qwik-city'
 import './dashboard.css'
 
-import styles from '../styles.css?inline'
+// import styles from '../styles.css?inline'
 import SidebarTwo from '~/components/common/sidebar/sidebar-two'
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
@@ -24,16 +24,16 @@ export const useServerTimeLoader = routeLoader$(() => {
 })
 
 export default component$(() => {
-	useStyles$(styles)
+	// useStyles$(styles)
 	return (
-		<div id='dashboard-wrapper' class='relative h-screen p-2 gap-2'>
-			<header class='[grid-area:navbar] min-h-[75px] rounded-lg bg-red-500 flex items-center relative'>
+		<div id='dashboard-wrapper' class='relative h-screen p-2 gap-2 bg-black'>
+			<header class='[grid-area:navbar] min-h-[75px] rounded-lg bg-zinc-900 flex items-center relative justify-between md:justify-end px-3'>
 				<button
 					data-drawer-target='logo-sidebar'
 					data-drawer-toggle='logo-sidebar'
 					aria-controls='logo-sidebar'
 					type='button'
-					class='absolute z-40 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+					class='text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
 				>
 					<span class='sr-only'>Openc sidebar</span>
 					<svg
@@ -50,9 +50,84 @@ export default component$(() => {
 						></path>
 					</svg>
 				</button>
+
+				<div class='flex items-center'>
+					<div class='flex items-center ml-3'>
+						<div>
+							<button
+								type='button'
+								class='flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600'
+								aria-expanded='false'
+								data-dropdown-toggle='dropdown-user'
+							>
+								<span class='sr-only'>Open user menu</span>
+								<img
+									class='w-10 h-10 rounded-full'
+									src='https://flowbite.com/docs/images/people/profile-picture-5.jpg'
+									alt='user photo'
+								/>
+							</button>
+						</div>
+						<div
+							class='z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600'
+							id='dropdown-user'
+						>
+							<div class='px-4 py-3' role='none'>
+								<p class='text-sm text-gray-900 dark:text-white' role='none'>
+									Neil Sims
+								</p>
+								<p
+									class='text-sm font-medium text-gray-900 truncate dark:text-gray-300'
+									role='none'
+								>
+									neil.sims@flowbite.com
+								</p>
+							</div>
+							<ul class='py-1' role='none'>
+								<li>
+									<a
+										href='#'
+										class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white'
+										role='menuitem'
+									>
+										Dashboard
+									</a>
+								</li>
+								<li>
+									<a
+										href='#'
+										class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white'
+										role='menuitem'
+									>
+										Settings
+									</a>
+								</li>
+								<li>
+									<a
+										href='#'
+										class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white'
+										role='menuitem'
+									>
+										Earnings
+									</a>
+								</li>
+								<li>
+									<a
+										href='#'
+										class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white'
+										role='menuitem'
+									>
+										Sign out
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</header>
+
 			<SidebarTwo />
-			<main class='[grid-area:main] h-full rounded-lg overflow-y-auto bg-zinc-900 p-2'>
+			<main class='[grid-area:main] h-full rounded-lg overflow-y-auto bg-zinc-900 p-5'>
 				<Slot />
 			</main>
 		</div>

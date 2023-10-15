@@ -8,11 +8,11 @@
 
 @layer components {
 	.qwik-sidebar-item-component {
-		@apply opacity-70 font-medium text-black ease-in duration-75 cursor-pointer flex gap-5 flex-wrap items-center p-3 rounded-xl hover:bg-gray-200;
+		@apply opacity-70 font-medium text-gray-50 ease-in duration-75 cursor-pointer flex gap-5 flex-wrap items-center p-3 rounded-xl hover:bg-zinc-800 transition;
 	}
 
 	.selected {
-		@apply bg-gray-200;
+		@apply bg-zinc-800 opacity-100 text-white translate-x-2;
 	}
 
 	.qwik-button-primary {
@@ -47,7 +47,7 @@
 	--qwik-dark-purple: #713fc2;
 	--qwik-dirty-black: #1d2033;
 	--qwik-dark-background: #151934;
-	--qwik-dark-text: #ffffff;
+	--qwik-light-text: #ffffff;
 	--light-background: #ebebed;
 }
 
