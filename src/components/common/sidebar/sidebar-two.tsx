@@ -70,7 +70,7 @@ export default component$(() => {
 								height={30}
 								width={30}
 							/>
-							<span class='self-center text-xl font-semibold whitespace-nowrap dark:text-white'>
+							<span class='self-center text-xl font-semibold whitespace-nowrap text-white'>
 								Biz-Mate
 							</span>
 						</a>

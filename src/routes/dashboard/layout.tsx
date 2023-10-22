@@ -62,9 +62,11 @@ export default component$(() => {
 							>
 								<span class='sr-only'>Open user menu</span>
 								<img
-									class='w-10 h-10 rounded-full'
+									class='rounded-full'
 									src='https://flowbite.com/docs/images/people/profile-picture-5.jpg'
 									alt='user photo'
+									width={40}
+									height={40}
 								/>
 							</button>
 						</div>
